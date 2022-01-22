@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { useAppSelector } from "@hooks/reduxHook";
 // import { logout } from "@modules/auth/slices";
 import UserMenu from "./UserMenu";
-import logo from "@assets/images/logo.jpg";
+
 const { Header } = Layout;
 
 const HeaderNav = () => {
@@ -14,7 +14,12 @@ const HeaderNav = () => {
   return (
     <Header className="flex justify-between">
       <div className="logo">
-        <img src={logo} alt="logo" />
+        <img
+          src={
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYjEltJ_8sy7kj6gw5fuLPJIsNDvP6UpRsLA&usqp=CAU"
+          }
+          alt="logo"
+        />
       </div>
 
       <Menu
@@ -23,12 +28,26 @@ const HeaderNav = () => {
         className="justify-center flex-grow text-white"
       >
         <Menu.Item>
-          <Link to="/project">Trang chủ</Link>
+          <Link to="/">Trang chủ</Link>
         </Menu.Item>
         <Menu.Item>
-          <Link to="/upgrade">
-            <Badge count={1}>
-              <span className="text-white">Upgrade</span>
+          <Link to="/extra-text-from-image">
+            <Badge count={"!"}>
+              <span className="text-white">Extra Text From Image</span>
+            </Badge>
+          </Link>
+        </Menu.Item>
+        <Menu.Item>
+          <Link to="/sharpen-image">
+            <Badge count={"!"}>
+              <span className="text-white">Sharpen Image</span>
+            </Badge>
+          </Link>
+        </Menu.Item>
+        <Menu.Item>
+          <Link to="/image-classification">
+            <Badge count={"!"}>
+              <span className="text-white">Image Classification</span>
             </Badge>
           </Link>
         </Menu.Item>

@@ -1,11 +1,10 @@
+import Text2Img from "@modules/text2img";
 import { lazy } from "react";
-
-const Home = lazy(() => import("../pages/home"));
 
 const homeRoute = [
   {
     path: "/",
-    component: Home,
+    component: Text2Img,
     exact: true,
   },
 ];

@@ -21,9 +21,9 @@ function App() {
     <React.StrictMode>
       <LazyMotion features={loadFeatures} strict>
         <div style={{ position: "absolute" }} id="back-to-top-anchor" />
-        <Layout className="h-full">
+        <Layout className="h-full !bg-white">
           <HeaderNav />
-          <div className="ml-48 text-white text-lg"></div>
+          <div className="ml-48 text-white text-lg !bg-white"></div>
           <GetRoutes />
           {/* <Footer /> */}
         </Layout>
