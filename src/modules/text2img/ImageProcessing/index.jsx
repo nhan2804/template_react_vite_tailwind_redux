@@ -129,14 +129,8 @@ function ImageProcessing(props) {
           );
           break;
       case typeIP.sepia:
-        return (
-          true
-        );
         break;
       case typeIP.negative:
-        return (
-          true
-        );
         break;
       default:
         break;
@@ -161,16 +155,11 @@ function ImageProcessing(props) {
     if (fileNameImgP && model) {
       formData.append("last_img", "" + fileNameImgP);
     }
-    Object.keys(filter).forEach((key) => formData.append(key, filter[key]));
+    if(filter){
+      Object.keys(filter).forEach((key) => formData.append(key, filter[key]));
+    }
     handleImage(formData);
-    // sharp(
-    //   { type, formData },
-    //   {
-    //     onSuccess: (d) => {
-    //       console.log(d);
-    //     },
-    //   }
-    // );
+    console.log(filter);
   };
   useEffect(() => {
     refButton.current.click();
