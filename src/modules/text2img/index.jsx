@@ -84,7 +84,7 @@ function Text2Img(props) {
                     "flex border w-80 h-60 p-2 text-center items-center justify-center text-2xl font-semibold"
                   }
                 >
-                  Choose a image
+                  Choose image
                 </p>
               </div>
             </div>
@@ -111,7 +111,6 @@ function Text2Img(props) {
                   <Option value="sharp">Sharp</Option>
                   <Option value="gaussian">Gaussian</Option>
                   <Option value="embossing">Embossing</Option>
-                  <Option value="negative">Negative</Option>
                   <Option value="blur">Blur</Option>
                 </Select>
 
@@ -121,7 +120,7 @@ function Text2Img(props) {
                   type="ghost"
                   loading={isLoadingSharp}
                 >
-                  Sharpen Image
+                  Filtered Image
                 </Button>
               </Space>
               <Button
@@ -135,13 +134,13 @@ function Text2Img(props) {
             </div>
           </div>
         </Col>
-        <Col span={12}>
+        <Col span={12} className="mt-20">
           {data && <h1 className="text-center text-3xl">Extract Text</h1>}
           <div className="flex justify-center">
             {data && (
               <div className="flex">
                 {data && (
-                  <textarea rows={10} cols={80}>
+                  <textarea rows={20} cols={100}>
                     {data}
                   </textarea>
                 )}
@@ -167,7 +166,7 @@ function Text2Img(props) {
                   />
                 </div>
                 <div>
-                  <h1 className="text-center text-2xl">Alter</h1>
+                  <h1 className="text-center text-2xl">After</h1>
                   <img className="w-[500px]" alt="ll" src={dataSharp} />
                 </div>
               </div>

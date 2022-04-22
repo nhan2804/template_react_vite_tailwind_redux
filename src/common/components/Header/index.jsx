@@ -32,38 +32,33 @@ const HeaderNav = () => {
         </Menu.Item>
         <Menu.Item>
           <Link to="/extra-text-from-image">
-            <Badge count={"!"}>
-              <span className="text-white">Extra Text From Image</span>
-            </Badge>
+            {/* <Badge count={"!"}> */}
+            <span className="text-white">Extra Text From Image</span>
+            {/* </Badge> */}
           </Link>
         </Menu.Item>
         <Menu.Item>
           <Link to="/sharpen-image">
-            <Badge count={"!"}>
-              <span className="text-white">Sharpen Image</span>
-            </Badge>
+            {/* <Badge count={"!"}> */}
+            <span className="text-white">Filtered Image</span>
+            {/* </Badge> */}
           </Link>
         </Menu.Item>
         <Menu.Item>
           <Link to="/image-classification">
-            <Badge count={"!"}>
-              <span className="text-white">Image Classification</span>
-            </Badge>
+            {/* <Badge count={"!"}> */}
+            <span className="text-white">Image Classification</span>
+            {/* </Link></Badge> */}
+          </Link>
+        </Menu.Item>
+        <Menu.Item>
+          <Link to="/image-processing">
+            {/* <Badge count={"!"}> */}
+            <span className="text-white">Image Processing</span>
+            {/* </Link></Badge> */}
           </Link>
         </Menu.Item>
       </Menu>
-      {!user ? (
-        <div className="space-x-2">
-          <Button type="primary">
-            <Link to="/login">Đăng nhập</Link>
-          </Button>
-          <Button type="link">
-            <Link to="/register">Đăng ký</Link>
-          </Button>
-        </div>
-      ) : (
-        <UserMenu />
-      )}
     </Header>
   );
 };
