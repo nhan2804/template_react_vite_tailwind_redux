@@ -24,7 +24,9 @@ const tv60 = (formData) => {
 const sepia = (formData) => {
   return axios.post("/sepia", formData);
 };
-
+const negative = (formData) => {
+  return axios.post("/negative", formData);
+};
 export {
   extraText,
   sharpen,
@@ -34,4 +36,5 @@ export {
   emBoss,
   tv60,
   sepia,
+  negative,
 };
